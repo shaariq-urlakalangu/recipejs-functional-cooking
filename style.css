@@ -335,3 +335,95 @@ main {
 .substeps-list .substeps-list li {
     font-size: 0.85rem;
 }
+
+/* Search Container */
+.search-container {
+    max-width: 500px;
+    margin: 1.5rem auto 0;
+    position: relative;
+}
+
+#search-input {
+    /* TODO: Style with full width, padding, rounded corners */
+    /* Hint: padding-right should be larger (for clear button) */
+    width: 100%;
+    padding: 13px;
+    border-radius: 20px;
+    border:none;
+}
+
+#search-input:focus {
+    /* TODO: Remove outline, add box-shadow */
+    outline: none;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+
+.clear-btn {
+    /* TODO: Position absolute, right side, vertically centered */
+    /* Hint: Use position: absolute, right: 10px, top: 50%, transform: translateY(-50%) */
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Recipe Counter */
+.recipe-info {
+    /* TODO: Center text, add margin */
+    align-items: center;
+    margin:30px;
+}
+
+/* Favorite Button on Cards */
+.favorite-btn {
+    /* TODO: Position in top-right corner of card */
+    /* Hint: position: absolute, top: 1rem, right: 1rem */
+    /* Don't forget to add position: relative to .recipe-card */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.recipe-card{
+    position: relative;
+}
+
+.favorite-btn:hover {
+    /* TODO: Scale up slightly */
+    transform: scale(1.5,1.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* slightly smaller */
+    }
+    
+    .search-container {
+        margin: 1rem auto; /* reduce top margin for smaller screens */
+    }
+    
+    .recipe-card {
+        width: 90%; /* almost full width on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .button-group {
+        flex-direction: column; /* stack buttons vertically */
+        gap: 0.5rem; /* smaller gap */
+    }
+    
+    .filter-btn,
+    .sort-btn {
+        width: 100%; /* full width buttons */
+    }
+
+    header p {
+        font-size: 0.95rem; /* adjust subtitle text */
+    }
+
+    .recipe-card {
+        padding: 1rem; /* smaller padding for small screens */
+    }
+}
